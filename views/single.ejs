@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chef Creations</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<style>
+  .card:hover{
+    border: 1px;
+  }
+</style>
+  <body>
+    
+    <%- include('partials/navbar') %>
+
+<div class="singleStyle">
+
+    <div class="card mb-3" style="height: max-content;">
+      <img src="data:image/<%=item[0].img.contentType%>;base64,<%=item[0].img.data.toString('base64')%>" class="card-img-top" alt="..." style="width: 100%; height:500px;">
+    </div>
+    <div class="card-body">
+      <h3 class="card-title" style="margin-bottom: 20px;"><%= item[0].title %></h3>
+      <h4 style="margin: 10px 0;"><%= item[0].about %></h4>
+      <div id="value"><%= item[0].text %></div>
+      <div class="card-text" id="root"></div>
+      <p class="card-text"><small class="text-muted" style="color:#fff !important;">Last updated  <%= item[0].lastDate.substring(0,10) %> </small></p>
+    </div>
+
+    <% if(loggedIn){ %>
+    <form action="/delete/<%= item[0].id %>" method="post">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+       <% } %>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script>
+
+        var y = document.getElementById("root");
+        var value = document.getElementById("value");
+        y.innerHTML = value.innerText;
+        value.remove();
+
+</script>
+</body>
+</html>
