@@ -79,7 +79,7 @@ mongoose.connect(process.env.URI, (error) => {
     else{
 
         console.log("Connected to DB");
-        app.listen(process.env.PORT , ()=>{
+        app.listen(process.env.PORT || 8080 , ()=>{
             console.log("Address is http://localhost:2000");   
         });
 
