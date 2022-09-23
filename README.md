@@ -2,8 +2,8 @@
 Chef- creation is a mini- blogging web app which tells about some interesting facts about food.
 
 ## Here are some key features about this project
-Chef Creations is a mini-Blogging Web-app Which tells some interesting facts about food.
-Follow the Model View Controlller (MVC) architecture.
+Chef Creations is a mini-Blogging Web-app Which tells some interesting facts about food.<br />
+Follow the Model View Controlller (MVC) architecture.<br />
 Session and Cookies for User Authentication and Validation.
 Server side Data validation with express-validator library.
 Usage of CSRF token to prevent from cross-site-request-forgery attacks.
