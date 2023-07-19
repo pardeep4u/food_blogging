@@ -1,8 +1,8 @@
-# chef-creations
-Chef- creation is a mini- blogging web app which tells about some interesting facts about food.
+# Food Blogging
+Chef- creation is a mini- blogging web app implemented in Node.js , express.js , MongoDB and EJS which tells about some interesting facts about food.
 
 ## Here are some key features about this project
-Chef Creations is a mini-Blogging Web-app Which tells some interesting facts about food.<br />
+Food Blogging is a mini-Blogging Web-app Which tells some interesting facts about food.<br />
 Follow the Model View Controlller (MVC) architecture.<br />
 Session and Cookies for User Authentication and Validation.<br />
 Server side Data validation with express-validator library.<br />
