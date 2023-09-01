@@ -1,5 +1,5 @@
 # Food Blogging
-Food Blogging is a mini- blogging web app implemented in **Node.js , express.js , MongoDB and EJS** which tells about some interesting facts about food.
+Food Blogging is a mini- blogging web app implemented in **Node.js , express.js , MongoDB, Multer for File handling and EJS** which tells about some interesting facts about food.
 
 ## Here are some key features about this project
 Food Blogging is a mini-Blogging Web-app Which tells some interesting facts about food.<br />
